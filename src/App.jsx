@@ -1,4 +1,4 @@
-import { restaurants } from './constant';
+import { restaurants } from './constants';
 import './App.css';
 
 function App() {
