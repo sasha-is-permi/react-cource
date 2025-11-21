@@ -1,0 +1,116 @@
+/* Основной контейнер */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Список ресторанов */
+.restaurants__list {
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurants__list-block {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restaurants__list-block h2 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Меню */
+.menu__list {
+  margin-bottom: 25px;
+}
+
+.menu__list h3 {
+  color: #34495e;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.menu__list-block {
+  list-style: none;
+  padding: 0;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.menu__list-block li {
+  padding: 8px 0;
+  color: #555;
+  font-size: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.menu__list-block li:last-child {
+  border-bottom: none;
+}
+
+/* Отзывы */
+.reviews__list h3 {
+  color: #34495e;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.reviews__list-block {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews__list-block li {
+  margin-bottom: 10px;
+}
+
+.review__block {
+  background-color: #f8f9fa;
+  border-left: 4px solid #3498db;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.review__block-name {
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.review__block-text {
+  color: #555;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.review__block-rating {
+  color: #f39c12;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+
+.review__block-rating::before {
+  content: "⭐ Рейтинг: ";
+}
+
