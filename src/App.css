@@ -1,0 +1,82 @@
+/* Страница */
+.page {
+  padding: 20px;
+}
+
+.page__title {
+  text-align: center;
+}
+
+/* Список ресторанов */
+.restaurant-list {
+  margin-top: 20px;
+}
+
+/* Карточка ресторана */
+.restaurant-card {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.restaurant-card__title {
+  padding-bottom: 10px;
+}
+
+/* Меню блюд */
+.dish-menu {
+  margin-top: 20px;
+}
+
+.dish-menu__title {
+}
+
+.dish-menu__list {
+  list-style: none;
+  padding: 0;
+  padding: 10px;
+}
+
+.dish-menu__item {
+  padding: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-menu__name {
+  font-weight: bold;
+}
+
+.dish-menu__price {
+}
+
+/* Отзывы */
+.feedback {
+  margin-top: 20px;
+}
+
+.feedback__title {
+}
+
+.feedback__list {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback__item {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback__author {
+  font-weight: bold;
+}
+
+.feedback__text {
+  margin: 5px 0;
+}
+
+.feedback__rating {
+}
