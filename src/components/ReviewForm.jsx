@@ -1,5 +1,6 @@
 import { useReducer } from 'react';
 import Counter from './Counter';
+import Button from './Button';
 import styles from './ReviewForm.module.css';
 
 const initialState = {
@@ -82,12 +83,12 @@ function ReviewForm() {
             max={5}
           />
         </div>
-        <button
+        <Button
           onClick={handleClear}
           className={styles.button}
         >
           Clear
-        </button>
+        </Button>
       </div>
     </div>
   );

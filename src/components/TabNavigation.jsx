@@ -1,11 +1,12 @@
 import classNames from 'classnames';
+import Button from './Button';
 import styles from './TabNavigation.module.css';
 
 function TabNavigation({ restaurants, activeId, onTabClick }) {
   return (
     <div className={styles.root}>
       {restaurants.map((restaurant) => (
-        <button
+        <Button
           key={restaurant.id}
           className={classNames(styles.button, {
             [styles.active]: restaurant.id === activeId,
@@ -17,7 +18,7 @@ function TabNavigation({ restaurants, activeId, onTabClick }) {
           }}
         >
           {restaurant.name}
-        </button>
+        </Button>
       ))}
     </div>
   );

@@ -1,15 +1,16 @@
 import styles from './Counter.module.css';
+import Button from './Button';
 
 function Counter({ value, onIncrement, onDecrement, min = 0, max = Infinity }) {
   return (
     <div className={styles.root}>
-      <button onClick={onDecrement} disabled={value <= min}>
+      <Button onClick={onDecrement} disabled={value <= min}>
         -
-      </button>
+      </Button>
       <span>{value}</span>
-      <button onClick={onIncrement} disabled={value >= max}>
+      <Button onClick={onIncrement} disabled={value >= max}>
         +
-      </button>
+      </Button>
     </div>
   );
 }
