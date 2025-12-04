@@ -1,21 +1,19 @@
+import classNames from 'classnames';
+import styles from './TabNavigation.module.css';
+
 function TabNavigation({ restaurants, activeId, onTabClick }) {
   return (
-    <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', margin: '20px 0' }}>
+    <div className={styles.root}>
       {restaurants.map((restaurant) => (
         <button
           key={restaurant.id}
+          className={classNames(styles.button, {
+            [styles.active]: restaurant.id === activeId,
+          })}
           onClick={() => {
             if (restaurant.id !== activeId) {
               onTabClick(restaurant.id);
             }
-          }}
-          style={{
-            padding: '10px 20px',
-            backgroundColor: restaurant.id === activeId ? '#646cff' : '#1a1a1a',
-            color: restaurant.id === activeId ? '#fff' : '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: restaurant.id === activeId ? 'default' : 'pointer',
           }}
         >
           {restaurant.name}

@@ -1,0 +1,11 @@
+.root {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+

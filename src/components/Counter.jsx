@@ -1,6 +1,8 @@
+import styles from './Counter.module.css';
+
 function Counter({ value, onIncrement, onDecrement, min = 0, max = Infinity }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+    <div className={styles.root}>
       <button onClick={onDecrement} disabled={value <= min}>
         -
       </button>

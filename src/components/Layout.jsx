@@ -1,10 +1,11 @@
 import Header from './Header';
 import Footer from './Footer';
 import ProgressBar from './ProgressBar';
+import styles from './Layout.module.css';
 
 function Layout({ children }) {
   return (
-    <div className="page">
+    <div className={styles.root}>
       <ProgressBar />
       <Header />
 
