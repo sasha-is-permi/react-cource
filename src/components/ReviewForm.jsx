@@ -1,5 +1,7 @@
 import { useReducer } from 'react';
 import Counter from './Counter';
+import Button from './Button';
+import styles from './ReviewForm.module.css';
 
 const initialState = {
   name: '',
@@ -50,42 +52,29 @@ function ReviewForm() {
   };
 
   return (
-    <div style={{ marginTop: '20px', padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
-      <h4 style={{ marginBottom: '15px' }}>Добавить отзыв</h4>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-        <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Имя:</label>
+    <div className={styles.root}>
+      <h4 className={styles.title}>Добавить отзыв</h4>
+      <div className={styles.form}>
+        <div className={styles.field}>
+          <label className={styles.label}>Имя:</label>
           <input
             type="text"
             value={state.name}
             onChange={handleNameChange}
-            style={{
-              width: '100%',
-              padding: '8px',
-              borderRadius: '4px',
-              border: '1px solid #ddd',
-              fontSize: '1em',
-            }}
+            className={styles.input}
           />
         </div>
-        <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Текст отзыва:</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Текст отзыва:</label>
           <textarea
             value={state.text}
             onChange={handleTextChange}
             rows="4"
-            style={{
-              width: '100%',
-              padding: '8px',
-              borderRadius: '4px',
-              border: '1px solid #ddd',
-              fontSize: '1em',
-              resize: 'vertical',
-            }}
+            className={styles.textarea}
           />
         </div>
-        <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Рейтинг:</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Рейтинг:</label>
           <Counter
             value={state.rating}
             onIncrement={handleRatingIncrement}
@@ -94,20 +83,12 @@ function ReviewForm() {
             max={5}
           />
         </div>
-        <button
+        <Button
           onClick={handleClear}
-          style={{
-            padding: '10px 20px',
-            backgroundColor: '#1a1a1a',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            alignSelf: 'flex-start',
-          }}
+          className={styles.button}
         >
           Clear
-        </button>
+        </Button>
       </div>
     </div>
   );

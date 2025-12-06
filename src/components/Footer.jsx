@@ -1,6 +1,8 @@
+import styles from './Footer.module.css';
+
 function Footer() {
   return (
-    <footer style={{ padding: '20px', textAlign: 'center', marginTop: '40px' }}>
+    <footer className={styles.root}>
       <p>&copy; 2024 Рестораны</p>
     </footer>
   );

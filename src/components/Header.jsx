@@ -1,7 +1,9 @@
+import styles from './Header.module.css';
+
 function Header() {
   return (
     <header>
-      <h1 className="page__title">Рестораны</h1>
+      <h1 className={styles.title}>Рестораны</h1>
     </header>
   );
 }

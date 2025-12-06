@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { restaurants } from './constants';
-import './App.css';
 import Layout from './components/Layout';
 import TabNavigation from './components/TabNavigation';
 import Restaurant from './components/Restaurant';

@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #646cff;
+  cursor: default;
+}
+
