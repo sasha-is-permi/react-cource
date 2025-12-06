@@ -6,16 +6,12 @@
 }
 
 .button {
-  padding: 10px 20px;
-  background-color: #1a1a1a;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  /* Стили наследуются от Button, здесь только отступы если нужны */
 }
 
+/* Активная кнопка должна перекрывать тему */
 .active {
-  background-color: #646cff;
+  background-color: #646cff !important;
+  color: white !important;
   cursor: default;
 }
-

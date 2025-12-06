@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 import Counter from './Counter';
 
 function DishCounter() {
+  const { user } = useAuth();
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
@@ -15,6 +17,10 @@ function DishCounter() {
       setCount(count - 1);
     }
   };
+
+  if (!user) {
+    return null;
+  }
 
   return (
     <Counter
