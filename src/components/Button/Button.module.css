@@ -20,9 +20,12 @@
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  .root {
-    background-color: #f9f9f9;
-  }
+.dark {
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
+.light {
+  background-color: #f9f9f9;
+  color: #213547;
+}

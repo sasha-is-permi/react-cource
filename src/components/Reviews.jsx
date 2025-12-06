@@ -1,8 +1,11 @@
+import { useAuth } from '../contexts/AuthContext';
 import Review from './Review';
 import ReviewForm from './ReviewForm';
 import styles from './Reviews.module.css';
 
 function Reviews({ reviews }) {
+  const { user } = useAuth();
+
   return (
     <div className={styles.root}>
       <h3 className={styles.title}>Отзывы</h3>
@@ -13,7 +16,7 @@ function Reviews({ reviews }) {
           ))}
         </ul>
       )}
-      <ReviewForm />
+      {user && <ReviewForm />}
     </div>
   );
 }
