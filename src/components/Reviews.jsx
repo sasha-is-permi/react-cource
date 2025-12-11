@@ -3,16 +3,16 @@ import Review from './Review';
 import ReviewForm from './ReviewForm';
 import styles from './Reviews.module.css';
 
-function Reviews({ reviews }) {
+function Reviews({ reviewIds }) {
   const { user } = useAuth();
 
   return (
     <div className={styles.root}>
       <h3 className={styles.title}>Отзывы</h3>
-      {reviews && reviews.length > 0 && (
+      {reviewIds && reviewIds.length > 0 && (
         <ul className={styles.list}>
-          {reviews.map((review) => (
-            <Review key={review.id} review={review} />
+          {reviewIds.map((id) => (
+            <Review key={id} id={id} />
           ))}
         </ul>
       )}

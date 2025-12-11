@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { restaurants } from './constants';
+import { useSelector } from 'react-redux';
+import { selectRestaurants } from './store/slices/restaurantSlice';
 import Layout from './components/Layout';
 import TabNavigation from './components/TabNavigation';
 import Restaurant from './components/Restaurant';
 
 function App() {
+  const restaurants = useSelector(selectRestaurants);
   const [activeRestaurantId, setActiveRestaurantId] = useState(
     restaurants[0]?.id || null
-  );
-
-  const activeRestaurant = restaurants.find(
-    (r) => r.id === activeRestaurantId
   );
 
   return (
@@ -21,7 +19,7 @@ function App() {
         onTabClick={setActiveRestaurantId}
       />
       <div className="restaurant-list">
-        <Restaurant restaurant={activeRestaurant} />
+        <Restaurant id={activeRestaurantId} />
       </div>
     </Layout>
   );

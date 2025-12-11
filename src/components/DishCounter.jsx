@@ -1,20 +1,26 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useAuth } from '../contexts/AuthContext';
+import {
+  addToCart,
+  removeFromCart,
+  selectCartItemAmountById,
+} from '../store/slices/cartSlice';
 import Counter from './Counter';
 
-function DishCounter() {
+function DishCounter({ id }) {
   const { user } = useAuth();
-  const [count, setCount] = useState(0);
+  const amount = useSelector((state) => selectCartItemAmountById(state, id));
+  const dispatch = useDispatch();
 
   const handleIncrement = () => {
-    if (count < 5) {
-      setCount(count + 1);
+    if (amount < 5) {
+      dispatch(addToCart(id));
     }
   };
 
   const handleDecrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+    if (amount > 0) {
+      dispatch(removeFromCart(id));
     }
   };
 
@@ -24,7 +30,7 @@ function DishCounter() {
 
   return (
     <Counter
-      value={count}
+      value={amount}
       onIncrement={handleIncrement}
       onDecrement={handleDecrement}
       min={0}
